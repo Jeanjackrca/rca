@@ -105,18 +105,6 @@
         </footer>
     </div>
 
-    <!-- Message de blague finale -->
-    <div id="joke-reveal" class="joke-overlay" style="display:none;">
-        <div class="joke-content">
-            <h1>😂 C'ÉTAIT UNE BLAGUE ! 😂</h1>
-            <p>Tu t'es fait avoir !</p>
-            <p>Tout ça c'était une blague ! 🎉</p>
-            <p>Il n'y a pas de girafes espionnes ni d'hippopotames sous-marins...</p>
-            <p><em>Enfin... on ne sait jamais ! 🦒🛡️</em></p>
-            <button id="close-joke">OK, bien joué ! 👍</button>
-        </div>
-    </div>
-
     <script>
         // Récupérer le nom stocké
         const storedName = localStorage.getItem('userName');
@@ -142,20 +130,11 @@
             
             if (timeLeft <= 0) {
                 clearInterval(timerInterval);
-                showJoke();
             }
         }, 1000);
 
         // Déconnexion
-        document.getElementById('logout-btn').addEventListener('click', showJoke);
-
-        function showJoke() {
-            clearInterval(timerInterval);
-            document.getElementById('joke-reveal').style.display = 'flex';
-        }
-
-        // Fermer la blague
-        document.getElementById('close-joke').addEventListener('click', function() {
+        document.getElementById('logout-btn').addEventListener('click', function() {
             localStorage.removeItem('userName');
             window.location.href = 'index.html';
         });

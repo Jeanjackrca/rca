@@ -5,7 +5,6 @@ let timerInterval;
 // Éléments DOM
 const loginPage = document.getElementById('login-page');
 const articlePage = document.getElementById('article-page');
-const jokeReveal = document.getElementById('joke-reveal');
 const authForm = document.getElementById('auth-form');
 const errorMsg = document.getElementById('error-msg');
 const submitBtn = document.getElementById('submit-btn');
@@ -13,7 +12,6 @@ const btnText = submitBtn ? submitBtn.querySelector('.btn-text') : null;
 const btnLoading = submitBtn ? submitBtn.querySelector('.btn-loading') : null;
 const userWelcome = document.getElementById('user-welcome');
 const logoutBtn = document.getElementById('logout-btn');
-const closeJokeBtn = document.getElementById('close-joke');
 const timerElement = document.getElementById('timer');
 
 // Gestion du formulaire
@@ -115,36 +113,15 @@ function startSessionTimer() {
         
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            showJoke();
         }
     }, 1000);
 }
 
 // Bouton de déconnexion
 if (logoutBtn) {
-    logoutBtn.addEventListener('click', showJoke);
-}
-
-function showJoke() {
-    clearInterval(timerInterval);
-    if (jokeReveal) {
-        jokeReveal.style.display = 'flex';
-    }
-}
-
-// Fermer la blague
-if (closeJokeBtn) {
-    closeJokeBtn.addEventListener('click', function() {
-        jokeReveal.style.display = 'none';
-        if (articlePage) articlePage.style.display = 'none';
-        if (loginPage) {
-            loginPage.style.display = 'flex';
-            loginPage.style.opacity = '1';
-        }
-        
-        if (authForm) authForm.reset();
-        if (errorMsg) errorMsg.style.display = 'none';
-        sessionStorage.removeItem('userName');
+    logoutBtn.addEventListener('click', function() {
+        localStorage.removeItem('userName');
+        window.location.href = 'index.html';
     });
 }
 
@@ -158,7 +135,6 @@ if (logo) {
         clickCount++;
         
         if (clickCount === 3) {
-            showJoke();
             clickCount = 0;
         }
         
@@ -171,4 +147,3 @@ if (logo) {
 
 // Console message
 console.log('%c🇨🇫 Portail RCA', 'color: green; font-size: 20px; font-weight: bold;');
-console.log('%cCe site est une blague ! 😄', 'color: orange; font-size: 14px;');

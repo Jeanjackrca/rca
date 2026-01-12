@@ -22,8 +22,9 @@ body {
     align-items: center;
     padding: 20px;
     background: 
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" opacity="0.03">🌍</text></svg>') center/300px repeat,
-        linear-gradient(135deg, #1a472a 0%, #2d5016 50%, #1a3a1a 100%);
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1580130379624-3a069adbffc5?w=1920') center/cover no-repeat fixed;
+    min-height: 100vh;
 }
 
 .login-box {
@@ -37,37 +38,35 @@ body {
     color: #333;
 }
 
-/* Couleurs du drapeau RCA */
-.flag-colors {
-    height: 8px;
-    background: linear-gradient(to right, 
-        #003082 0%, #003082 25%, 
-        #fff 25%, #fff 50%, 
-        #289728 50%, #289728 75%, 
-        #ffce00 75%, #ffce00 100%);
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
-
 .header-rca {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.logo {
-    font-size: 50px;
-    margin: 15px 0;
+.flag-img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .header-rca h1 {
-    font-size: 22px;
+    font-size: 20px;
     color: #1a472a;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .subtitle {
     color: #666;
     font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.motto {
+    color: #888;
+    font-size: 12px;
+    font-style: italic;
 }
 
 .info-box {

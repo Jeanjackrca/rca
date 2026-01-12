@@ -22,8 +22,8 @@ body {
     align-items: center;
     padding: 20px;
     background: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Central_African_Republic.svg/1920px-Flag_of_the_Central_African_Republic.svg.png') center/cover no-repeat fixed;
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url('https://images.pexels.com/photos/7468198/pexels-photo-7468198.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat fixed;
     min-height: 100vh;
 }
 
